@@ -6,10 +6,13 @@ This bookmarklet has only been tested in Chrome (v41), and doesn't work in the l
 Firefox (because of security policy set by Twitter), and might not work in future browser
 versions.
 
+![sample screenshot](https://raw.githubusercontent.com/cgarvey/clear-tweetdeck-cols/master/cgcleartd.gif "Screenshot of Bookmarklet in acton")
+
+
 Usage
 ------
 Copy this code in to a new bookmarklet in your browser:
-	
+
 	javascript:var cgClearTDDirection = 0; var cgClearTDIndex = 0; function cgClearTD() { if( cgClearTDIndex > 4 ) { if( cgClearTDDirection == 0 ) { $('button[data-action=\"clear\"]').click(); cgClearTDDirection = 1; cgClearTDIndex = 0; } else { cgClearTDDirection = 1; cgClearTDIndex = 0; return; } } $( $('a[class~=\"column-settings-link\"]')[cgClearTDIndex] ).trigger( 'click' ); cgClearTDIndex++; window.setTimeout( cgClearTD, 400 ); } cgClearTD();
 
 Contributing
