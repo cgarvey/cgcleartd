@@ -36,8 +36,7 @@ function cgClearTD() {
 		}
 		$( $('a[class~="column-settings-link"]')[cgClearTDIndex] ).trigger( 'click' );
 		cgClearTDIndex++;
-		window.setTimeout( cgClearTD, 500 );
+		window.setTimeout( cgClearTD, 350 );
 	}
 }
 cgClearTD();
-
